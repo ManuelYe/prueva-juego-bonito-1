@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.cont_game{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(183,159,241);
+    border: 2px solid rgb(131,132,223);
+}
+#Lor{
+    background-color: rgb(183,159,241);
+    border: 2px solid rgb(131,132,223);
+    width: 600px;
+    height: 170px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+div::-webkit-scrollbar{
+    width: 0;
+}
+#Lore{
+    background-color: rgb(131,132,223);
+    border: 2px solid rgb(183,159,241);
+    width: 600px;
+    height: 200px;
+}
+#interfas_menu{
+    font-size: 15px;
+    width: 600px;
+    height: 200px;
+    background-color: rgb(183,159,241);
+    border: 2px solid rgb(131,132,223);
+align-items: center;
+justify-content: center;
+display: flexbox;
+}
+#menu{
+    background-color: rgb(131,132,223);
+    display: flex;
+    width: 100%;
+    height: 30px;
+    align-items: center;
+    justify-content:baseline;
+    border: 2px solid rgb(183,159,241);
+    overflow: hidden;
+}
+#menu ul li{
+    display: inline-flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(183,159,241);
+    width: 25vh;
+    height: 30px;
+}
+.inactivo{
+    background-color: rgb(131,132,223);
+    width: 25vh;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.estad_avatar{
+    display:inline-block;
+    width: 33vh;
+    height: 30vh;
+}
+.estad_avatar samp{
+    display: flex;
+    width: 20px;
+}
+tr{
+    justify-content: left;
+    display: flex;
+}
+.celda_objeto{
+display: flex;
+margin: 0 3px;
+width: 50px;
+height: 40px;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+.celda_objeto:hover{
+    background-color: rgb(131,132,223);;
+}
+#content_inventario{
+    display: flex;
+    align-items: center;
+justify-content: center;
+}
+.select{
+    border: 2px solid rgb(131,132,223);
+}
+.ubi_tienda{
+    width: 0;
+    height: 0;
+    display: flex;
+}
+
+
+
+.vicible{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.no_vicible{
+    display: none;
+}

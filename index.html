@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ju js</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="botones.css">
+</head>
+<body>
+<section class="cont_game">
+<div>
+        <h1 id="ubicacion">Ubicacion: Casa</h1>
+<div id="Lore">
+    <h2>lore</h2>
+    <div id="Lor">
+        <p id="mensaje">
+        despiertas en tu casa como de costumbre preparado para una nueva aventura  
+        </p>
+    </div>
+</div>
+<div class="button_box">
+    <div id="casa_buttons" class="">
+        <button id="dormir" onclick="dormir()" class="action_button">Dormir</button>
+        <button id="fabricar" onclick="fabricar()" class="action_button">Fabricar</button>
+        <button id="salir" onclick="moverse('camino')" class="action_button">salir</button>
+    </div>
+    <div id="camino_buttons" class="no_vicible">
+        <button onclick="moverse('casa')" class="action_button">casa</button>
+        <button onclick="moverse('cueva')" class="action_button">cueva</button>
+        <samp onclick= "cambiar_botones_menu('tienda')"><button onclick="moverse('tienda')" class="action_button">tienda</button> </samp>
+    </div>
+    <div id="cueva_buttons" class="no_vicible">
+        <button onclick="avanzar()" class="action_button">avanzar</button>
+        <button onclick="retroceder()" class="action_button">retroceder</button>
+        <button onclick="reposo()" class="action_button">reposar</button>
+        <button id="salir" onclick="moverse('camino')" class="action_button">salir</button>
+    </div>
+    <div id="tienda_buttons" class="no_vicible">
+        <button onclick="agregar_objeto(vola_de_astado)" class="action_button">comprar</button>
+        <button onclick="" class="action_button">vender</button>
+        <samp onclick= "cambiar_botones_menu('normal')"><button onclick="moverse('camino')" onclick= "cambiar_botones_menu('normal')" class="action_button">salir</button></div></samp>
+    <div id="battel_buttons" class="no_vicible">
+        <button onclick="atacar()" class="action_button">Atacar</button>
+        <button onclick="especial()" class="action_button">Especial</button>
+        <button onclick="escapar()" class="action_button">Escapar</button>
+    </div>
+</div>    
+<div id="interfas_menu">
+    <div id="menu">
+        <ul>
+            <li>
+                <label class="inactivo" id="estad" onclick="inventario('estad')">estadisticas</label>
+            </li>
+            <li>
+                <span class="inactivo" id="inven" onclick="inventario('inven')">inventario</span>
+            </li>
+            <li>
+                <label class="inactivo" id="misio" onclick="inventario('misio')">mision</label>
+            </li>
+
+        </ul>
+    </div>
+    <div class='contenico_menu'>
+
+    </div>
+    <div id="estadisticas" class="no_vicible">
+        <div class="estad_avatar"><samp id="salud">vida</samp><samp id="ataque">ataque</samp><samp id="velocidad">velicidad</samp><samp id="ekip">equipmento</samp></div>
+        <div class="estad_avatar"><samp id="oro">oro</samp><samp>vivo</samp></div>
+        <div class="estad_avatar"><samp>titulo</samp></div>
+    </div>
+    <div id="inventario" class="no_vicible">
+        <div id="content_inventario">       
+        <table class="default">
+        <tr>
+            <td class="celda_objeto" id="1" onclick="selector(id)">Celda 1</td>
+            <td class="celda_objeto" id="2" onclick="selector(id)">Celda 2</td>
+            <td class="celda_objeto" id="3" onclick="selector(id)">Celda 3</td>
+            <td class="celda_objeto" id="4" onclick="selector(id)">Celda 4</td>
+            <td class="celda_objeto" id="5" onclick="selector(id)">Celda 5</td>
+            <td class="celda_objeto" id="6" onclick="selector(id)">Celda 6</td>
+            <td class="celda_objeto" id="7" onclick="selector(id)">Celda 7</td>
+            <td class="celda_objeto" id="8" onclick="selector(id)">Celda 8</td>
+            <td class="celda_objeto" id="9" onclick="selector(id)">Celda 9</td>
+            <td class="celda_objeto" id="10" onclick="selector(id)">Celda 10</td>
+        </tr>
+        <tr>
+            <td class="celda_objeto" id="11" onclick="selector(id)">Celda 11</td>
+            <td class="celda_objeto" id="12" onclick="selector(id)">Celda 12</td>
+            <td class="celda_objeto" id="13" onclick="selector(id)">Celda 13</td>
+            <td class="celda_objeto" id="14" onclick="selector(id)">Celda 14</td>
+            <td class="celda_objeto" id="15" onclick="selector(id)">Celda 15</td>
+            <td class="celda_objeto" id="16" onclick="selector(id)">Celda 16</td>
+            <td class="celda_objeto" id="17" onclick="selector(id)">Celda 17</td>
+            <td class="celda_objeto" id="18" onclick="selector(id)">Celda 18</td>
+            <td class="celda_objeto" id="19" onclick="selector(id)">Celda 19</td>
+            <td class="celda_objeto" id="20" onclick="selector(id)">Celda 20</td>
+        </tr>
+        <tr>
+            <td class="celda_objeto" id="21" onclick="selector(id)">Celda 21</td>
+            <td class="celda_objeto" id="22" onclick="selector(id)">Celda 22</td>
+            <td class="celda_objeto" id="23" onclick="selector(id)">Celda 23</td>
+            <td class="celda_objeto" id="24" onclick="selector(id)">Celda 24</td>
+            <td class="celda_objeto" id="25" onclick="selector(id)">Celda 25</td>
+            <td class="celda_objeto" id="26" onclick="selector(id)">Celda 26</td>
+            <td class="celda_objeto" id="27" onclick="selector(id)">Celda 27</td>
+            <td class="celda_objeto" id="28" onclick="selector(id)">Celda 28</td>
+            <td class="celda_objeto" id="29" onclick="selector(id)">Celda 29</td>
+            <td class="celda_objeto" id="30" onclick="selector(id)">Celda 30</td>
+        </tr>
+        </table>
+    </div>
+
+        <div class="button_box">
+            <button id="use_button" class="action_button" onclick="">use</button>
+            <button id="mover_button" class="action_button" onclick="mover_objeto(1)" >mover</button>
+        </div>
+    </div>
+    <div id="misiones" class="no_vicible">
+    
+    </div>
+    <div id="tienda" class="no_vicible">
+        <div id="content_inventario">       
+            <table class="default">
+            <tr>
+                <td class="celda_objeto" id="1" onclick="selector(id)">Celda 1</td>
+                <td class="celda_objeto" id="2" onclick="selector(id)">Celda 2</td>
+                <td class="celda_objeto" id="3" onclick="selector(id)">Celda 3</td>
+                <td class="celda_objeto" id="4" onclick="selector(id)">Celda 4</td>
+                <td class="celda_objeto" id="5" onclick="selector(id)">Celda 5</td>
+                <td class="celda_objeto" id="6" onclick="selector(id)">Celda 6</td>
+                <td class="celda_objeto" id="7" onclick="selector(id)">Celda 7</td>
+                <td class="celda_objeto" id="8" onclick="selector(id)">Celda 8</td>
+                <td class="celda_objeto" id="9" onclick="selector(id)">Celda 9</td>
+                <td class="celda_objeto" id="10" onclick="selector(id)">Celda 10</td>
+            </tr>
+            <tr>
+                <td class="celda_objeto" id="11" onclick="selector(id)">Celda 11</td>
+                <td class="celda_objeto" id="12" onclick="selector(id)">Celda 12</td>
+                <td class="celda_objeto" id="13" onclick="selector(id)">Celda 13</td>
+                <td class="celda_objeto" id="14" onclick="selector(id)">Celda 14</td>
+                <td class="celda_objeto" id="15" onclick="selector(id)">Celda 15</td>
+                <td class="celda_objeto" id="16" onclick="selector(id)">Celda 16</td>
+                <td class="celda_objeto" id="17" onclick="selector(id)">Celda 17</td>
+                <td class="celda_objeto" id="18" onclick="selector(id)">Celda 18</td>
+                <td class="celda_objeto" id="19" onclick="selector(id)">Celda 19</td>
+                <td class="celda_objeto" id="20" onclick="selector(id)">Celda 20</td>
+            </tr>
+            <tr>
+                <td class="celda_objeto" id="21" onclick="selector(id)">Celda 21</td>
+                <td class="celda_objeto" id="22" onclick="selector(id)">Celda 22</td>
+                <td class="celda_objeto" id="23" onclick="selector(id)">Celda 23</td>
+                <td class="celda_objeto" id="24" onclick="selector(id)">Celda 24</td>
+                <td class="celda_objeto" id="25" onclick="selector(id)">Celda 25</td>
+                <td class="celda_objeto" id="26" onclick="selector(id)">Celda 26</td>
+                <td class="celda_objeto" id="27" onclick="selector(id)">Celda 27</td>
+                <td class="celda_objeto" id="28" onclick="selector(id)">Celda 28</td>
+                <td class="celda_objeto" id="29" onclick="selector(id)">Celda 29</td>
+                <td class="celda_objeto" id="30" onclick="selector(id)">Celda 30</td>
+            </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+</div>
+</section>
+
+</body>
+<script src="objetos.js"></script>
+<script src="battel.js"></script>
+<script src="inventario.js"></script>
+<script src="personajes.js"></script>
+<script src="main.js" ></script>
+</html>

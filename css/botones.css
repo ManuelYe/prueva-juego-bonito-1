@@ -1,0 +1,29 @@
+.button_box{
+    background-color: rgb(131,132,223);
+    border: 2px solid rgb(183,159,241);
+    text-align: center;
+    justify-items: center;
+    width: 600px;
+}
+.action_button{
+    text-align: center;
+    text-decoration: none;
+    font-size: 18;
+    width: 100px;
+    padding: 10px 5px;
+    color: #000000;
+    background-color: rgb(131,132,223);
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.action_button:hover{
+    background-color: rgb(183,159,241);
+}
+#use_button{
+
+}
+#mover_button{
+    
+}
