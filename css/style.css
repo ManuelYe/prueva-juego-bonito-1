@@ -1,6 +1,15 @@
 *{
     margin: 0;
     padding: 0;
+} 
+.celda_tienda{
+display: flex;
+margin: 0 3px;
+width: 50px;
+height: 40px;
+align-items: center;
+justify-content: center;
+cursor: pointer;
 }
 .cont_game{
     align-items: center;
@@ -93,6 +102,9 @@ justify-content: center;
 cursor: pointer;
 }
 .celda_objeto:hover{
+    background-color: rgb(131,132,223);;
+}
+.celda_tienda:hover{
     background-color: rgb(131,132,223);;
 }
 #content_inventario{

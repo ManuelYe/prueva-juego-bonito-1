@@ -12,7 +12,7 @@ const funciones_x = [
 function curar (cuanto,quien = avatar) {quien.salud += cuanto},
 function mensaje (text){mensaje.innerHTML += '<br>' + text}
 ]
-
+ 
 /*moverse*/
 function moverse (lugar){
 switch (lugar) {
