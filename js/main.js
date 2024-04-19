@@ -12,7 +12,6 @@ const funciones_x = [
 function curar (cuanto,quien = avatar) {quien.salud += cuanto},
 function mensaje (text){mensaje.innerHTML += '<br>' + text}
 ]
-
 /*moverse*/
 function moverse (lugar){
 switch (lugar) {
@@ -82,6 +81,20 @@ function reposo (){}
 function compar (){}
 function vender (){}
 
-/*aliados*/
+// notas y consejos
+const nota_consejos = ['Gracias hermano por las medias','CUIDADO! el fuego quema ','Toma un vaso de agua al levantarte de la cama','Las puertas abiertas no estan cerradas','Dispararle a un enemigo le hace mas daño que no hacerlo','Los enemigos no son tus amigos','No es pecado pelear por la justicia al contrario eso es una buena obra recuerda que existen oponentes que jamás entenderán con las palabras. Solamente tienes soltar la furia que se encuentra en tú espíritu entiendo como te sientes pero ya no tienes por que seguir soportadolo... protege a los seres vivos y a las plantas de este mundo que tanto amo','Llama a la abuela','No dejes de respirar... porque te moriras','Recuerden amigos, en la primera cita invitenla a comer helado para ver como la chupa','Si no sabes cocinar echale sal todo mejora con sal','Los cautos rara vez se equivocan','Nunca des una espada a alguien que no es capaz de sonreír y bailar']
+var nota_visible = 0 
+const nota_pantalla = document.getElementById('consejos')
 
+function repetir (){
+    nota_pantalla.innerHTML = '<samp class='+"'animar_aparecer'"+'>'+ nota_consejos[parseInt(Math.random() * 10)] +'</samp>'
+    
+    setTimeout(()=>{
+    repetir()
+},10000)
+
+}
+
+
+repetir()
 inventario()

@@ -1,23 +1,36 @@
 let bolsa = [balde,vola_de_astado,balde,vola_de_astado,balde,vola_de_astado,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio]
+let bolsa_tienda = [vola_de_astado,vola_de_astado,vola_de_astado,vola_de_astado,balde,vola_de_astado,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio,espacio_basio]
 var interfas_visible = document.getElementById('estadisticas')
 var contenido_visible = document.getElementById('estad')
 let menu_botones_interfas = document.getElementById('menu')
 let interfas_inventario = document.getElementById('inventario')
 const celdas_objetos = document.querySelectorAll('.celda_objeto')
+const celdas_tienda = document.querySelectorAll('.celda_tienda')
 let objeto_seleccionado = ''
 let celda_seleccionado = ''
 let c1, c2, o1, o2 ,posicion_en_bolsa,posicion_en_bolsa1,posicion_en_bolsa2= ''
 let per = false
 let p = true
-function selector (id){
+function selector (id,clase){
     if (celda_seleccionado != '') {
         celda_seleccionado.classList.remove('select')
     }
-    celda_seleccionado = celdas_objetos[id-1]
-    objeto_seleccionado = bolsa[id-1]
+    switch (clase) {
+        case 1:
+            celda_seleccionado = celdas_objetos[id-1]
+            objeto_seleccionado = bolsa[id-1]
+            break;
+        case 2:
+            celda_seleccionado = celdas_tienda[id-1]
+            objeto_seleccionado = bolsa_tienda[id-1]
+        break;
+        default:
+            break;
+    }
+    console.log(celda_seleccionado)
     posicion_en_bolsa = id-1
     celda_seleccionado.classList.add('select')
-
+    
     inventario(null)
     mover_objeto(2)
 
@@ -51,6 +64,7 @@ for (let index = 0; index < 30; index++) {
         bolsa[index] = obj
         obj = espacio_basio
     }
+    inventario()
 }
 //barro de botones del menu
 
@@ -118,16 +132,22 @@ function inventario (a){
 for (let index = 0; index < 30; index++) {
     celdas_objetos[index].innerHTML = bolsa[index].nombre
 }
-
+//escribir tienda
+for (let index = 0; index < 30; index++) {
+    celdas_tienda[index].innerHTML = bolsa_tienda[index].nombre
+}
 }
 function cambiar_botones_menu (e){
     switch (e) {
         case 'normal':
-            menu_botones_interfas.innerHTML = `\n        <ul>\n            <li>\n                <label class="inactivo" id="estad" onclick="inventario('estad')">estadisticas</label>\n            </li>\n            <li>\n                <span class="inactivo" id="inven" onclick="inventario('inven')">inventario</span>\n            </li>\n            <li>\n                <label class="inactivo" id="misio" onclick="inventario('misio')">mision</label>\n            </li>\n\n        </ul>\n   `
-    
+            menu_botones_interfas.innerHTML = `\n        <ul>\n            <li>\n                <samp class="inactivo" id="estad" onclick="inventario('estad')">estadisticas</samp>\n            </li>\n            <li>\n                <samp class="inactivo" id="inven" onclick="inventario('inven')">inventario</samp>\n            </li>\n            <li>\n                <samp class="inactivo" id="misio" onclick="inventario('misio')">mision</samp>\n            </li>\n\n        </ul>\n   `
+            interfas_visible = document.getElementById('tienda')
+            interfas_visible.classList.add('no_vicible')
+            interfas_visible.classList.remove('vicible')
+            
             break;
         case 'tienda':
-            menu_botones_interfas.innerHTML = `\n        <ul>\n            <li>\n                <label class="inactivo" id="estad" onclick="inventario('estad')">estadisticas</label>\n            </li>\n            <li>\n                <span class="inactivo" id="inven" onclick="inventario('inven')">inventario</span>\n            </li>\n            <li>\n                <label class="inactivo" id="misio" onclick="inventario('misio')">mision</label>\n            </li>\n            <li>\n                \n                <label class="inactivo" id="tiend" onclick="inventario('tiend')">tienda</label>\n                \n            </li>\n        </ul>\n  `
+            menu_botones_interfas.innerHTML = `\n        <ul>\n            <li>\n                <samp class="inactivo" id="estad" onclick="inventario('estad')">estadisticas</samp>\n            </li>\n            <li>\n                <samp class="inactivo" id="inven" onclick="inventario('inven')">inventario</samp>\n            </li>\n            <li>\n                <samp class="inactivo" id="misio" onclick="inventario('misio')">mision</samp>\n            </li>\n            <li>\n                \n                <samp class="inactivo" id="tiend" onclick="inventario('tiend')">tienda</samp>\n                \n            </li>\n        </ul>\n  `
             interfas_visible = document.getElementById('tienda')
             interfas_visible.classList.add('no_vicible')
             interfas_visible.classList.remove('vicible')
