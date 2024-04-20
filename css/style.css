@@ -3,16 +3,17 @@
     padding: 0;
     box-sizing:border-box;
     font-family: comfortaa, cursive;
-    color: #ffffff;
-    font-size :0 !important; 
+    color: #ffffff; 
+
 } 
 body{
     background: url(../img/fonde\ verde\ oscuro.jpg) center ;
+    background-size: cover;
 }
 :root{
     --color-fondo: url(../img/fondo\ verde.jpg);
-    --color-resaltar: #4d9b20;
-    --color-borde:#F56C17 ; 
+    --color-resaltar: #2d5a13;
+    --color-borde:#000000 ; 
     --color-letras: #ffffff;
 }
 nav{
@@ -39,6 +40,12 @@ text-decoration: none;
 color: var(--color-letras);
 font-weight: 700;
 }
+.nota_text{
+    display: flex;
+    padding: 10px;
+    animation: aparecer 2s ease-out ;
+    flex-direction: column;
+}
 .nota_extra{
     display: flex;
     width: 20%;
@@ -57,6 +64,9 @@ font-weight: 700;
     align-items: center;
     position: relative;
     box-shadow: #000 0px 0px 50px;
+}
+#descripcion{
+    
 }
 .info_extra{
     width: 90%;

@@ -1,8 +1,18 @@
 .animar_aparecer {
-    animation: aparecer 10s ease-out running both;
+    animation: aparecer_desaparecer 10s ease-out running both;
     position: relative;
 }
 @keyframes aparecer {
+    0%{
+        transform: translateX(-80px) ;
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes aparecer_desaparecer {
     0%{
         transform: translateX(-80px) ;
         opacity: 0;

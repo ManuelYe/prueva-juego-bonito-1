@@ -21,24 +21,26 @@ cursor: pointer;
     width: 50%;
     min-width:300px;
     position: relative;
-    padding: 10px;
+    padding: 12px;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
     background: var(--color-fondo);
     box-shadow: #000 0px 0px 50px;
-    height: 90%;
+    height: 95%;
 }
 #Lor{
     /* background: var(--color-fondo); */
     /* border: 2px solid var(--color-borde); */
     width: 100%;
-    height: 100%;
+    height: 90%;
     min-height: 50px;
     max-height: 200px;
+
     overflow: hidden;
     overflow-y: scroll;
+    padding: 10px;
 }
 div::-webkit-scrollbar{
     width: 0;
@@ -49,6 +51,7 @@ div::-webkit-scrollbar{
     width: 100%;
     height: 200px ;
     overflow: hidden;
+    padding: 10px;
 }
 #interfas_menu{
     font-size: 15px;
@@ -61,7 +64,7 @@ div::-webkit-scrollbar{
     display: flexbox;
 }
 #menu{
-    background-color: var(--color-fondo);   
+    background-color: var(--color-resaltar);   
     display: flex;
     width: 100%;
     height: 40px;
@@ -84,9 +87,10 @@ div::-webkit-scrollbar{
     justify-content: center;
     width: 100%;
     height: 100%;
+    
 }
 .inactivo{
-    background-color: var(--color-fondo);  
+    background-color: var(--color-resaltar) ;  
     width: 100%;
     height: 100%;
     display:flex;
@@ -109,21 +113,21 @@ div::-webkit-scrollbar{
     align-items: center;
     justify-content: center;
 }
-tr{
-    justify-content: left;
-    display: flex;
-}
 .celda_objeto{
 display: flex;
-margin: 0 3px;
-width: 50px;
+width: 10%;
 height: 40px;
 align-items: center;
 justify-content: center;
 cursor: pointer;
+border: 2px var(--color-resaltar) ;
+border-style: inset;
+background: url(../img/fondo.png);
+transition: all .5s;
 }
 .celda_objeto:hover{
-    background-color: var(--color-resaltar);
+    background-color: #ffffff70;
+    transform: scale(1.2);
 }
 .celda_tienda:hover{
     background-color: var(--color-resaltar);
@@ -131,7 +135,17 @@ cursor: pointer;
 #content_inventario{
     display: flex;
     align-items: center;
-justify-content: center;
+    justify-content: center;
+    width: 100%;    
+    max-height: 300px;
+    flex-direction: column;
+}
+.linea_objetos{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-height:50px ;
 }
 .select{
     border: 2px solid var(--color-borde);
@@ -157,9 +171,10 @@ justify-content: center;
     justify-items: center;
     width: 100%;
     position: relative;
-    background: var(--color-fondo);
+    background: url(../img/fondo\ verde.jpg);
     padding-top: 10px;
     bottom: 10px;
+    margin-top: 10px;
 }
 .action_button{
     text-align: center;
@@ -174,6 +189,7 @@ justify-content: center;
     border: none;
     color: #fff;
     font-size: 18px;
+    margin: 5px;
 }
 .action_button:hover{
     background: var(--color-resaltar);
@@ -186,7 +202,7 @@ justify-content: center;
     left: 0;
     width: 10px;
     z-index: 100;
-    box-shadow: #000 0px 0px 20px 5px;
+    box-shadow: #000 0px 0px 20px 10px;
 }
 .separador_ragiht{
     background: url('../img/linea\ vertical.png');
@@ -196,7 +212,7 @@ justify-content: center;
     right: 0px;
     top: 0px;
     z-index: 100;
-    box-shadow: #000 0px 0px 20px 5px;
+    box-shadow: #000 0px 0px 20px 10px;
 }
 .separador_bottom{
     background: url('../img/linea\ horisontal.png');
@@ -206,7 +222,7 @@ justify-content: center;
     top: 0;
     left:0;
     z-index: 100;
-    box-shadow: #000 0px 0px 20px 5px;
+    box-shadow: #000 0px 0px 20px 10px;
 }
 .separador_top{
     background: url('../img/linea\ horisontal.png');
@@ -216,7 +232,7 @@ justify-content: center;
     bottom: 0;
     left:0;
     z-index: 100;
-    box-shadow: #000 0px 0px 20px 5px;
+    box-shadow: #000 0px 0px 20px 10px;
 }
 
 
@@ -230,6 +246,7 @@ justify-content: center;
     align-items: center;
     justify-content: center;
     position: relative;
+    height: 100%;
 }
 .no_vicible{
     display: none !important; 

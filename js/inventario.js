@@ -11,6 +11,10 @@ let celda_seleccionado = ''
 let c1, c2, o1, o2 ,posicion_en_bolsa,posicion_en_bolsa1,posicion_en_bolsa2= ''
 let per = false
 let p = true
+const descripcion_pantalla = document.getElementById('descripcion')
+function aparacer_text(id) {
+    descripcion_pantalla.innerHTML = '<samp class='+"'nota_texto'"+'>'+ 'Descripcion:'+ "" +bolsa[id-1].descripcion +'</samp>' +''+ '<samp class='+"'nota_texto'"+'>'+ bolsa[id-1].descripcion +'</samp>'
+}
 function selector (id,clase){
     if (celda_seleccionado != '') {
         celda_seleccionado.classList.remove('select')
@@ -30,7 +34,7 @@ function selector (id,clase){
     console.log(celda_seleccionado)
     posicion_en_bolsa = id-1
     celda_seleccionado.classList.add('select')
-    
+    aparacer_text(id)
     inventario(null)
     mover_objeto(2)
 
