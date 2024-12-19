@@ -7,7 +7,6 @@ const casa_buttons = document.getElementById('casa_buttons')
 const camino_buttons = document.getElementById('camino_buttons')
 const cueva_buttons = document.getElementById('cueva_buttons')
 const tienda_buttons = document.getElementById('tienda_buttons')
-
 const funciones_x = [ 
 function curar (cuanto,quien = avatar) {quien.salud += cuanto},
 function mensaje (text){mensaje.innerHTML += '<br>' + text}
@@ -47,7 +46,6 @@ switch (lugar) {
         break;
 }
 }
-
 /*casa*/
 function dormir  (){
     avatar.salud = salud_max
@@ -60,7 +58,6 @@ function dormir  (){
 function fabricar (){
     console.log('ok')
 }
-
 /*cueva*/
 let profundidad = 0
 function avanzar (){
@@ -76,7 +73,6 @@ function retroceder (){
     mensaje.innerHTML += '<br>' + 'ahora estas en la profundidad: ' + profundidad
 }
 function reposo (){}
-
 /*tienda*/
 function compar (){}
 function vender (){}
@@ -85,14 +81,11 @@ function vender (){}
 const nota_consejos = ['Gracias hermano por las medias','CUIDADO! el fuego quema ','Toma un vaso de agua al levantarte de la cama','Las puertas abiertas no estan cerradas','Dispararle a un enemigo le hace mas daño que no hacerlo','Los enemigos no son tus amigos','No es pecado pelear por la justicia al contrario eso es una buena obra recuerda que existen oponentes que jamás entenderán con las palabras. Solamente tienes soltar la furia que se encuentra en tú espíritu entiendo como te sientes pero ya no tienes por que seguir soportadolo... protege a los seres vivos y a las plantas de este mundo que tanto amo','Llama a la abuela','No dejes de respirar... porque te moriras','Recuerden amigos, en la primera cita invitenla a comer helado para ver como la chupa','Si no sabes cocinar echale sal todo mejora con sal','Los cautos rara vez se equivocan','Nunca des una espada a alguien que no es capaz de sonreír y bailar']
 var nota_visible = 0 
 const nota_pantalla = document.getElementById('consejos')
-
 function repetir (){
-    nota_pantalla.innerHTML = '<samp class='+"'animar_aparecer'"+'>'+ nota_consejos[parseInt(Math.random() * 10)] +'</samp>'
-    
+    nota_pantalla.innerHTML = '<samp class='+"'animar_aparecer'"+'>'+ nota_consejos[parseInt(Math.random() * 13)] +'</samp>'
     setTimeout(()=>{
     repetir()
 },10000)
-
 }
 
 

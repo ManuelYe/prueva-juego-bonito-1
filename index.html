@@ -25,7 +25,6 @@
                 <li><a href="#informacion">Informacion General</a></li>
             </ul>
         </nav>
-
     </header>
     <section class="cont_game" id="juego">
         <div class="nota_extra" > 
@@ -33,7 +32,7 @@
             <samp class="separador_ragiht"></samp>
             <samp class="separador_top"></samp>
             <samp class="separador_bottom"></samp> 
-            <div id="consejos" style="position: relative;"></div>
+            <div id="consejos" class="nota_text"></div>
         </div>
         <div class="game">
             <samp class="separador_left"></samp>
@@ -105,44 +104,42 @@
                 </div>
                 <div id="inventario" class="no_vicible">
                     <div id="content_inventario">
-                        <table class="default">
-                            <tr>
-                                <td class="celda_objeto" id="1" onclick="selector(id,1)">Celda 1</td>
-                                <td class="celda_objeto" id="2" onclick="selector(id,1)">Celda 2</td>
-                                <td class="celda_objeto" id="3" onclick="selector(id,1)">Celda 3</td>
-                                <td class="celda_objeto" id="4" onclick="selector(id,1)">Celda 4</td>
-                                <td class="celda_objeto" id="5" onclick="selector(id,1)">Celda 5</td>
-                                <td class="celda_objeto" id="6" onclick="selector(id,1)">Celda 6</td>
-                                <td class="celda_objeto" id="7" onclick="selector(id,1)">Celda 7</td>
-                                <td class="celda_objeto" id="8" onclick="selector(id,1)">Celda 8</td>
-                                <td class="celda_objeto" id="9" onclick="selector(id,1)">Celda 9</td>
-                                <td class="celda_objeto" id="10" onclick="selector(id,1)">Celda 10</td>
-                            </tr>
-                            <tr>
-                                <td class="celda_objeto" id="11" onclick="selector(id,1)">Celda 11</td>
-                                <td class="celda_objeto" id="12" onclick="selector(id,1)">Celda 12</td>
-                                <td class="celda_objeto" id="13" onclick="selector(id,1)">Celda 13</td>
-                                <td class="celda_objeto" id="14" onclick="selector(id,1)">Celda 14</td>
-                                <td class="celda_objeto" id="15" onclick="selector(id,1)">Celda 15</td>
-                                <td class="celda_objeto" id="16" onclick="selector(id,1)">Celda 16</td>
-                                <td class="celda_objeto" id="17" onclick="selector(id,1)">Celda 17</td>
-                                <td class="celda_objeto" id="18" onclick="selector(id,1)">Celda 18</td>
-                                <td class="celda_objeto" id="19" onclick="selector(id,1)">Celda 19</td>
-                                <td class="celda_objeto" id="20" onclick="selector(id,1)">Celda 20</td>
-                            </tr>
-                            <tr>
-                                <td class="celda_objeto" id="21" onclick="selector(id,1)">Celda 21</td>
-                                <td class="celda_objeto" id="22" onclick="selector(id,1)">Celda 22</td>
-                                <td class="celda_objeto" id="23" onclick="selector(id,1)">Celda 23</td>
-                                <td class="celda_objeto" id="24" onclick="selector(id,1)">Celda 24</td>
-                                <td class="celda_objeto" id="25" onclick="selector(id,1)">Celda 25</td>
-                                <td class="celda_objeto" id="26" onclick="selector(id,1)">Celda 26</td>
-                                <td class="celda_objeto" id="27" onclick="selector(id,1)">Celda 27</td>
-                                <td class="celda_objeto" id="28" onclick="selector(id,1)">Celda 28</td>
-                                <td class="celda_objeto" id="29" onclick="selector(id,1)">Celda 29</td>
-                                <td class="celda_objeto" id="30" onclick="selector(id,1)">Celda 30</td>
-                            </tr>
-                        </table>
+                            <div class="linea_objetos">
+                                <samp class="celda_objeto" id="1" onclick="selector(id,1)">celda 1</samp>
+                                <samp class="celda_objeto" id="2" onclick="selector(id,1)">Celda 2</samp>
+                                <samp class="celda_objeto" id="3" onclick="selector(id,1)">Celda 3</samp>
+                                <samp class="celda_objeto" id="4" onclick="selector(id,1)">Celda 4</samp>
+                                <samp class="celda_objeto" id="5" onclick="selector(id,1)">Celda 5</samp>
+                                <samp class="celda_objeto" id="6" onclick="selector(id,1)">Celda 6</samp>
+                                <samp class="celda_objeto" id="7" onclick="selector(id,1)">Celda 7</samp>
+                                <samp class="celda_objeto" id="8" onclick="selector(id,1)">Celda 8</samp>
+                                <samp class="celda_objeto" id="9" onclick="selector(id,1)">Celda 9</samp>
+                                <samp class="celda_objeto" id="10" onclick="selector(id,1)">Celda 10</samp>
+                            </div>
+                            <div class="linea_objetos">
+                                <samp class="celda_objeto" id="11" onclick="selector(id,1)">Celda 11</samp>
+                                <samp class="celda_objeto" id="12" onclick="selector(id,1)">Celda 12</samp>
+                                <samp class="celda_objeto" id="13" onclick="selector(id,1)">Celda 13</samp>
+                                <samp class="celda_objeto" id="14" onclick="selector(id,1)">Celda 14</samp>
+                                <samp class="celda_objeto" id="15" onclick="selector(id,1)">Celda 15</samp>
+                                <samp class="celda_objeto" id="16" onclick="selector(id,1)">Celda 16</samp>
+                                <samp class="celda_objeto" id="17" onclick="selector(id,1)">Celda 17</samp>
+                                <samp class="celda_objeto" id="18" onclick="selector(id,1)">Celda 18</samp>
+                                <samp class="celda_objeto" id="19" onclick="selector(id,1)">Celda 19</samp>
+                                <samp class="celda_objeto" id="20" onclick="selector(id,1)">Celda 20</samp>
+                            </div>
+                            <div class="linea_objetos">
+                                <samp class="celda_objeto" id="21" onclick="selector(id,1)">Celda 21</samp>
+                                <samp class="celda_objeto" id="22" onclick="selector(id,1)">Celda 22</samp>
+                                <samp class="celda_objeto" id="23" onclick="selector(id,1)">Celda 23</samp>
+                                <samp class="celda_objeto" id="24" onclick="selector(id,1)">Celda 24</samp>
+                                <samp class="celda_objeto" id="25" onclick="selector(id,1)">Celda 25</samp>
+                                <samp class="celda_objeto" id="26" onclick="selector(id,1)">Celda 26</samp>
+                                <samp class="celda_objeto" id="27" onclick="selector(id,1)">Celda 27</samp>
+                                <samp class="celda_objeto" id="28" onclick="selector(id,1)">Celda 28</samp>
+                                <samp class="celda_objeto" id="29" onclick="selector(id,1)">Celda 29</samp>
+                                <samp class="celda_objeto" id="30" onclick="selector(id,1)">Celda 30</samp>
+                            </div>
                     </div>
 
                     <div class="button_inventario">
@@ -158,40 +155,40 @@
                     <div id="content_inventario">
                         <table class="default">
                             <tr>
-                                <td class="celda_tienda" id="1" onclick="selector(id,2)">Celda 1</td>
-                                <td class="celda_tienda" id="2" onclick="selector(id,2)">Celda 2</td>
-                                <td class="celda_tienda" id="3" onclick="selector(id,2)">Celda 3</td>
-                                <td class="celda_tienda" id="4" onclick="selector(id,2)">Celda 4</td>
-                                <td class="celda_tienda" id="5" onclick="selector(id,2)">Celda 5</td>
-                                <td class="celda_tienda" id="6" onclick="selector(id,2)">Celda 6</td>
-                                <td class="celda_tienda" id="7" onclick="selector(id,2)">Celda 7</td>
-                                <td class="celda_tienda" id="8" onclick="selector(id,2)">Celda 8</td>
-                                <td class="celda_tienda" id="9" onclick="selector(id,2)">Celda 9</td>
-                                <td class="celda_tienda" id="10" onclick="selector(id,2)">Celda 10</td>
+                                <samp onclick="aparecer_text(1)"> <samp class="celda_tienda" id="1" onclick="selector(id,2)">Celda 1</samp> </samp>
+                                <samp onclick="aparecer_text(2)"> <samp class="celda_tienda" id="2" onclick="selector(id,2)">Celda 2</samp> </samp>
+                                <samp onclick="aparecer_text(3)"> <samp class="celda_tienda" id="3" onclick="selector(id,2)">Celda 3</samp> </samp>
+                                <samp onclick="aparecer_text(4)"> <samp class="celda_tienda" id="4" onclick="selector(id,2)">Celda 4</samp> </samp>
+                                <samp onclick="aparecer_text(5)"> <samp class="celda_tienda" id="5" onclick="selector(id,2)">Celda 5</samp> </samp>
+                                <samp onclick="aparecer_text(6)"> <samp class="celda_tienda" id="6" onclick="selector(id,2)">Celda 6</samp> </samp>
+                                <samp onclick="aparecer_text(7)"> <samp class="celda_tienda" id="7" onclick="selector(id,2)">Celda 7</samp> </samp>
+                                <samp onclick="aparecer_text(8)"> <samp class="celda_tienda" id="8" onclick="selector(id,2)">Celda 8</samp> </samp>
+                                <samp onclick="aparecer_text(9)"> <samp class="celda_tienda" id="9" onclick="selector(id,2)">Celda 9</samp> </samp>
+                                <samp onclick="aparecer_text(10)"> <samp class="celda_tienda" id="10" onclick="selector(id,2)">Celda 10</samp> </samp>
                             </tr>
                             <tr>
-                                <td class="celda_tienda" id="11" onclick="selector(id,2)">Celda 11</td>
-                                <td class="celda_tienda" id="12" onclick="selector(id,2)">Celda 12</td>
-                                <td class="celda_tienda" id="13" onclick="selector(id,2)">Celda 13</td>
-                                <td class="celda_tienda" id="14" onclick="selector(id,2)">Celda 14</td>
-                                <td class="celda_tienda" id="15" onclick="selector(id,2)">Celda 15</td>
-                                <td class="celda_tienda" id="16" onclick="selector(id,2)">Celda 16</td>
-                                <td class="celda_tienda" id="17" onclick="selector(id,2)">Celda 17</td>
-                                <td class="celda_tienda" id="18" onclick="selector(id,2)">Celda 18</td>
-                                <td class="celda_tienda" id="19" onclick="selector(id,2)">Celda 19</td>
-                                <td class="celda_tienda" id="20" onclick="selector(id,2)">Celda 20</td>
+                                <samp onclick="aparecer_text(11)"> <samp class="celda_tienda" id="11" onclick="selector(id,2)">Celda 11</samp> </samp>
+                                <samp onclick="aparecer_text(12)"> <samp class="celda_tienda" id="12" onclick="selector(id,2)">Celda 12</samp> </samp>
+                                <samp onclick="aparecer_text(13)"> <samp class="celda_tienda" id="13" onclick="selector(id,2)">Celda 13</samp> </samp>
+                                <samp onclick="aparecer_text(14)"> <samp class="celda_tienda" id="14" onclick="selector(id,2)">Celda 14</samp> </samp>
+                                <samp onclick="aparecer_text(15)"> <samp class="celda_tienda" id="15" onclick="selector(id,2)">Celda 15</samp> </samp>
+                                <samp onclick="aparecer_text(16)"> <samp class="celda_tienda" id="16" onclick="selector(id,2)">Celda 16</samp> </samp>
+                                <samp onclick="aparecer_text(17)"> <samp class="celda_tienda" id="17" onclick="selector(id,2)">Celda 17</samp> </samp>
+                                <samp onclick="aparecer_text(18)"> <samp class="celda_tienda" id="18" onclick="selector(id,2)">Celda 18</samp> </samp>
+                                <samp onclick="aparecer_text(19)"> <samp class="celda_tienda" id="19" onclick="selector(id,2)">Celda 19</samp> </samp>
+                                <samp onclick="aparecer_text(20)"> <samp class="celda_tienda" id="20" onclick="selector(id,2)">Celda 20</samp> </samp>
                             </tr>
                             <tr>
-                                <td class="celda_tienda" id="21" onclick="selector(id,2)">Celda 21</td>
-                                <td class="celda_tienda" id="22" onclick="selector(id,2)">Celda 22</td>
-                                <td class="celda_tienda" id="23" onclick="selector(id,2)">Celda 23</td>
-                                <td class="celda_tienda" id="24" onclick="selector(id,2)">Celda 24</td>
-                                <td class="celda_tienda" id="25" onclick="selector(id,2)">Celda 25</td>
-                                <td class="celda_tienda" id="26" onclick="selector(id,2)">Celda 26</td>
-                                <td class="celda_tienda" id="27" onclick="selector(id,2)">Celda 27</td>
-                                <td class="celda_tienda" id="28" onclick="selector(id,2)">Celda 28</td>
-                                <td class="celda_tienda" id="29" onclick="selector(id,2)">Celda 29</td>
-                                <td class="celda_tienda" id="30" onclick="selector(id,2)">Celda 30</td>
+                                <samp onclick="aparecer_text(21)"> <samp class="celda_tienda" id="21" onclick="selector(id,2)">Celda 21</samp> </samp>
+                                <samp onclick="aparecer_text(22)"> <samp class="celda_tienda" id="22" onclick="selector(id,2)">Celda 22</samp> </samp>
+                                <samp onclick="aparecer_text(23)"> <samp class="celda_tienda" id="23" onclick="selector(id,2)">Celda 23</samp> </samp>
+                                <samp onclick="aparecer_text(24)"> <samp class="celda_tienda" id="24" onclick="selector(id,2)">Celda 24</samp> </samp>
+                                <samp onclick="aparecer_text(25)"> <samp class="celda_tienda" id="25" onclick="selector(id,2)">Celda 25</samp> </samp>
+                                <samp onclick="aparecer_text(26)"> <samp class="celda_tienda" id="26" onclick="selector(id,2)">Celda 26</samp> </samp>
+                                <samp onclick="aparecer_text(27)"> <samp class="celda_tienda" id="27" onclick="selector(id,2)">Celda 27</samp> </samp>
+                                <samp onclick="aparecer_text(28)"> <samp class="celda_tienda" id="28" onclick="selector(id,2)">Celda 28</samp> </samp>
+                                <samp onclick="aparecer_text(29)"> <samp class="celda_tienda" id="29" onclick="selector(id,2)">Celda 29</samp> </samp>
+                                <samp onclick="aparecer_text(30)"> <samp class="celda_tienda" id="30" onclick="selector(id,2)">Celda 30</samp> </samp>
                             </tr>
                         </table>
                     </div>
@@ -204,6 +201,7 @@
             <samp class="separador_ragiht"></samp>
             <samp class="separador_top"></samp>
             <samp class="separador_bottom"></samp>
+            <div class="nota_text" id="descripcion"> hola mundo</div>
         </div>
     </section>
     <section class="info_extra">
